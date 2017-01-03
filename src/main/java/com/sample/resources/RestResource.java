@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sample.service.HystrixService;
+import com.sample.service.HystrixWrappedService;
 
 @Component
 @Produces(MediaType.APPLICATION_JSON)
@@ -16,7 +16,7 @@ import com.sample.service.HystrixService;
 public class RestResource {
 
   @Autowired
-  private HystrixService service;
+  private HystrixWrappedService service;
 
   @GET
   @Path("hystrix")

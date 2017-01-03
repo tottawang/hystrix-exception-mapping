@@ -19,7 +19,7 @@ import com.sample.conf.Application;
 import com.sample.conf.HttpWebClient;
 
 @Component
-public class HystrixService {
+public class HystrixWrappedService {
 
   @Value("${HYSTRIX_TEST_URL:url_not_accessiable}")
   private String HYSTRIX_TEST_URL;
