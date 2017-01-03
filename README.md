@@ -1,6 +1,7 @@
 # hystrix-exception-mapping
 
-This same application is to use exception mapping to map `HystrixRuntimeException` to HTTP 503 error response.
+This same application is to map `HystrixRuntimeException` to HTTP 503 error response by using jersey exception mapping feature. When Hystrix exception is thrown, HystrixRuntimeExceptionMapper maps it to 503 and directly returned by resource. Hence there is no need for resource to catch the hystrix runtime exception explicitly. 
+
 
 ### Run and build
 Step-1: 
