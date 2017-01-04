@@ -13,10 +13,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.autodesk.exception.IntegrationRuntimeException;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.sample.conf.Application;
 import com.sample.conf.HttpWebClient;
+import com.sample.exception.IntegrationRuntimeException;
 
 @Component
 public class HystrixWrappedService {
