@@ -3,11 +3,9 @@ package com.sample.exception;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
 
 import com.netflix.hystrix.exception.HystrixRuntimeException;
 
-@Provider
 public class HystrixRuntimeExceptionMapper implements ExceptionMapper<HystrixRuntimeException> {
 
   @Override
@@ -15,7 +13,7 @@ public class HystrixRuntimeExceptionMapper implements ExceptionMapper<HystrixRun
 
     // we might need to log the exception here
 
-    return Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(exception.getMessage())
+    return Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(exception)
         .type(MediaType.APPLICATION_JSON).build();
   }
 }
